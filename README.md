@@ -22,7 +22,7 @@ build log for the project — not the deployed application code itself
 - [x] GLPI 11 installation & secure directory layout
 - [x] Default credentials rotated, demo data disabled
 - [x] Automatic actions verified running in CLI mode via cron
-- [ ] Active Directory / LDAP integration
+- [x] Active Directory / LDAP integration
 - [ ] Group Policy (GPO) rollout of GLPI Agent
 - [ ] Self-Service portal UX configuration
 - [ ] Scheduled/portable inventory via cron
@@ -56,7 +56,8 @@ itsm-infra/
     ├── 01-infrastructure-overview.md
     ├── 02-base-os-and-network.md
     ├── 03-lamp-and-glpi-installation.md
-    └── 04-security-hardening.md
+    ├── 04-security-hardening.md
+    └── 05-ldap-active-directory-integration.md
 ```
 
 ## Conventions
