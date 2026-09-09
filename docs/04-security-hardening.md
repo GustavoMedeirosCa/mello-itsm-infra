@@ -15,17 +15,16 @@ open. Update this file as further hardening happens.
       directory (`/etc/glpi`, `/var/lib/glpi/files`, `/var/log/glpi`)
 - [x] MariaDB `glpi` user scoped to `localhost` only, own database only
 
-## Open / planned
+## Hardening approach
 
-- [ ] Migrate SSH from password auth to key-based auth, then restore
-      `PermitRootLogin prohibit-password`
-- [ ] Rotate the MariaDB `glpi` user's password (it appeared in plaintext
-      during setup chat/logs — low risk since it's `localhost`-only, but
-      good practice to rotate)
-- [ ] Move to HTTPS (self-signed or internal CA cert) once the server is
-      reachable at its final production IP/hostname
-- [ ] Configure LDAP/Active Directory authentication for real users,
-      reducing reliance on local GLPI accounts
+Every default credential and demo setting introduced during install is
+treated as temporary and rotated out as a standard step, not an
+afterthought (see "Done" above for what's already been applied).
+
+Specific outstanding hardening items for this live, named production
+system are tracked in a private checklist, not published here — a
+public "known gaps" list for a real, identifiable server is itself
+useful information to an attacker, regardless of portfolio value.
 
 ## Credentials handling
 
