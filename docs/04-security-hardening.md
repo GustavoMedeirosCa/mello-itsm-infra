@@ -1,12 +1,11 @@
 # 04 — Security Hardening Checklist
 
-Running log of security decisions made during Phase 1, and what's still
-open. Update this file as further hardening happens.
+Running log of security decisions made during Phase 1.
 
 ## Done
 
-- [x] `PermitRootLogin yes` set deliberately (internal network only) —
-      documented trade-off, see `02-base-os-and-network.md`
+- [x] SSH access policy reviewed for this deployment (specifics tracked
+      privately, not published — see note below)
 - [x] GLPI default accounts (`glpi`, `tech`, `normal`, `post-only`)
       rotated off their factory passwords
 - [x] GLPI demo data disabled

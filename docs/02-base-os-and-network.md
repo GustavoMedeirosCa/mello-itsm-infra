@@ -17,15 +17,12 @@ PermitRootLogin prohibit-password
 This **silently rejects password authentication for `root` over SSH**,
 even with the correct password — it only accepts key-based auth. This
 produced confusing `Permission denied (publickey,password)` errors
-during setup that were *not* caused by a wrong password.
+early in the build, before SSH keys were in place, and is worth knowing
+if you hit the same error on a fresh Debian install.
 
-Fix applied (acceptable for this internal, access-controlled network;
-revisit with SSH keys for a stronger long-term posture):
-
-```bash
-sed -i 's/^PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
-systemctl restart ssh
-```
+The actual SSH access policy in place for this server is tracked in a
+private checklist rather than published here — see the note in
+`04-security-hardening.md`.
 
 ## Static network configuration
 

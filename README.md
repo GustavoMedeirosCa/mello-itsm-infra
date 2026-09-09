@@ -7,6 +7,12 @@ This repo tracks the design decisions, configuration, and step-by-step
 build log for the project — not the deployed application code itself
 (GLPI, Zabbix, etc. are third-party software installed on the server).
 
+> **A note on addresses:** all IPs and network details in this repository
+> use the `192.0.2.0/24` block, reserved by [RFC 5737](https://www.rfc-editor.org/rfc/rfc5737)
+> specifically for documentation and examples — never a real, routable
+> network. Every command and configuration shown was actually run in
+> production; only the addresses were swapped out before publishing.
+
 ## Project Phases
 
 ### Phase 1 — ITSM Core (in progress)
@@ -43,13 +49,15 @@ configuration decision.
 
 ## Repository Structure
 
+```
 itsm-infra/
 ├── README.md
 └── docs/
-├── 01-infrastructure-overview.md
-├── 02-base-os-and-network.md
-├── 03-lamp-and-glpi-installation.md
-└── 04-security-hardening.md
+    ├── 01-infrastructure-overview.md
+    ├── 02-base-os-and-network.md
+    ├── 03-lamp-and-glpi-installation.md
+    └── 04-security-hardening.md
+```
 
 ## Conventions
 
@@ -59,6 +67,8 @@ itsm-infra/
   (GLPI, etc.) remain in Portuguese for end users at Mello Transportes.
 - Credentials are **never** committed to this repository. See
   `.gitignore` and keep secrets in a password manager instead.
+- Live security posture (current SSH policy, open hardening items) is
+  tracked privately, not published — see `docs/04-security-hardening.md`.
 
 ## Author
 
