@@ -1,0 +1,11 @@
+# Nunca commitar credenciais
+docs/credenciais-*.md
+**/credentials-*.md
+*.env
+*.pem
+*.key
+
+# Ruído de SO/editor
+.DS_Store
+Thumbs.db
+*.swp
